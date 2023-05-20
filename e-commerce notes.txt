@@ -1,0 +1,140 @@
+backend all files created my ourself ,
+npm init -y -> package.json created
+index.js file -> to import something in index we need nodemodules , to get nodemodules we install express
+
+express use chaydaal kittuga - node modules : npm i express cors mongoose dotenv (express install time we install other libraries also)
+
+cors - to communicate b/w two different ports , angular port : 5000 , node - eg: 5000, nammal create chayyunnadaanu 
+express - using express we craete backend server application
+dotenv - environmental variable , in the case of mongodb run time kure values (updated,deleted) values come under this
+mongoose - used to connect mongodb and node.js
+
+
+
+
+
+
+dotenv :
+
+when we run something by connecting nodejs and mongodb,that time values will updated run chayyunna timilaan
+
+** run time il value update chayyunnadinaan dotenv file use chayya
+* dotenv file install chaydall pinne adine create chayyanam by .env
+
+
+ //creating backend 
+
+        create folder separate for backend , E-cart  contains eg: (E-Commerce,E-Commerce backend)
+        1.step 1 : create package.json file , command for this - npm init -y(automatic aayit create chayyum)
+        2.index file
+        3.express use chaydaal kittuga - node modules : npm i express cors mongoose dotenv
+              cors - used to communicate b/w two different ports
+              mongoose - connect database(mongo db) with nodejs
+              dotenv - to set environmental value
+
+
+        //user ne add chaydittu save kodukka
+
+       //to view connection string mongodb->database interphase il -> connect -> connect to cluster -> (setup connection security)
+
+       ->create a database user (enter username and password) -> thenclick create database user -> click choose a connection method ->  drivers
+
+       
+       
+       // ******* Add your connection string into your application code
+
+View full code sample
+
+connection string : mongodb+srv://periganchira:<password>@cluster0.vqimnkw.mongodb.net/?retryWrites=true&w=majority  
+
+Replace <password> with the password for the periganchira user. Ensure any option params are 
+URL encoded  *********************//
+
+
+//Solution-1: If you are using any special character in your password you need to encode the particular character as %+ASCII_code_of_the_character below link explains everything. https://docs.atlas.mongodb.com/troubleshoot-connection/#special-characters-in-connection-string-password
+
+Solution-2: Click on auto-generate password and paste it into the connection string, it will work.
+
+       NOTE
+..................
+The following characters must be converted using 
+percent encoding
+ if included in a username or password:
+
+: / ? # [ ] @
+
+For example, if your password in plain-text is p@ssw0rd'9'!, you need to encode your password as:
+
+p%40ssw0rd%279%27%21
+
+
+
+
+
+//connection venddi db enna folder created , inside that connection file is created (connection related details put here)
+
+//next our datbase works in which model - MVC architecture = Model view controller
+
+view -> user kaanunna part
+controller -> logic perform
+model -> what updation done
+
+//here in our project we create a model to datbase 
+//1.create a folder model , inside this create a file productSchema.js
+how datas set in database 
+
+//define schema for product collection
+//goto mongodb ->database -> browse collection -> data format eg:tile,price,id,description
+
+//required data type define chayyuga 
+//after schema creation create a model to store data
+//export model //then only we can use it
+
+..............................................................
+
+
+
+
+
+//eni mongodb storeed data(now in front-end nammal kodutha html page lee fancy product matarmulluu kure datas required) get chaydu front-end il display chayyanam ,so that index.html routes comment chayya [ // server.get('/',(req,res)=>{ res.status(200).json('E commerce Service Response')})  ], 
+
+also each have it's own specific route or path.(routes ne yellam different folder leek place chayyunnu).
+for that create a folder routes in backend & file router.js file inside it.
+
+
+To define routes for client request , create routes folder and a router.js file in it
+          ->import express  ,(then only we can access server application created using express)
+          ->using expresss create an object for router class inorder to setup path
+          ->Resolving client request
+       //export router -> export chayyunad vere evidenggilum use chayyanaan
+        //router ne index il import chayyuga , use chayyuga
+
+//from here(router) [path for client request ] data may or may not be come , to define this logic create a folder
+
+//data vannal may or may not promise ( in javascript) do these operation otherwise do this (edoru logic aan) so that we create folder productController to handle it.
+//client request anusarich each one logic(here cart,wishlist,products,viewcontroller  etc) will defined here
+
+        //to define logic of above path create a folder controllers (according to mvc architecture controller) ,what will do next  
+//router file present in routes folder  le api call logic evide productController.js file lil parannu kodukkunnu 
+/logic - resolving api's client first request , //get all products logic
+
+
+          *1. getallproducts nde logic aan so we create productController.js is created
+               after define logic callback asynchronouys , promise try catch  block 
+               next go to router.js file , and //import productController in routes.js
+               and router le getallproducts nde api call pathil , productController.getallproducts (productController nagathu nammal chayda kaaryam that function getallproducts adineeyum evide ) nneeyum parannu kodukkuga
+       
+
+       to test back-end working of getallproducts client request check it in postman
+       1.create a collection , give collection name = E-Commerce 
+       2.inside it 3 dots give addrequest , then give addrequest name , here request name is getallproducts
+       3.paste url : http://localhost:5000/products/all-products , products/all-products = this path copied from router , then click send obtain json data
+
+      backend logic and test finished
+
+      Now go to front-end 
+   .........................
+   1.backend created logic front-endil parannu kodukkanam in api service   
+    
+
+
