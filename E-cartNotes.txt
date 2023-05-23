@@ -29,3 +29,26 @@
     6.import connection.js in index.js
     7.create a model/collection to store products in model folder (productSchema)
     8.export schema(productSchema)
+
+
+
+            bankend hosting / site Deployment
+    ....................................
+
+    changes made in backend -> package.json file 
+     "scripts": {
+    "start": "nodemon index.js"
+  }
+
+  step 2 : git init , git add .,git commit -m "E-Cart" ,create repository in git & copy paste 6 th line in the code section.
+  paste it in terminal , git push origin master
+
+  step 3: RENDER  (backend hosting platform)
+    Render is a unified cloud to build and run all your apps and websites with free TLS certificates,
+    a global CDN, DDoS protection, private networks, and auto deploys from git
+              
+               1. get started for free
+               2.sign up for render -> Github-> Authorize Render ->complete sign up btn click 
+                   ->check verification mail -> click on link below to verify your email
+              3.Right side top btn (NEW+) click     
+
